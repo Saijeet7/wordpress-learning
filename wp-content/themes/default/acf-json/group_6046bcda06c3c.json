@@ -1,0 +1,62 @@
+{
+    "key": "group_6046bcda06c3c",
+    "title": "Site Settings",
+    "fields": [
+        {
+            "key": "field_6046bce04c6b9",
+            "label": "Header Code",
+            "name": "site_header_code",
+            "type": "textarea",
+            "instructions": "Allows for the addition of meta and tracking information in the <head> section of the site.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_6046bd094c6ba",
+            "label": "Body Code",
+            "name": "site_body_code",
+            "type": "textarea",
+            "instructions": "Allows for the addition of meta and tracking information directly under the <body> tag.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1615248709
+}
