@@ -17,7 +17,7 @@ body {
 
 a {
     text-decoration: none;
-    transition: .3s;
+    transition: 0.3s;
 
     &:focus,
     &:active {
@@ -35,7 +35,7 @@ a {
     .video-js,
     > iframe {
         position: absolute;
-        top:0;
+        top: 0;
         left: 0;
         width: 100%;
         height: 100%;
@@ -68,7 +68,7 @@ a {
 }
 
 .container {
-    max-width: $site-width;
+    max-width: 830px;
     width: 100%;
     padding-left: 32px;
     padding-right: 32px;
@@ -78,5 +78,43 @@ a {
     @media #{$phone} {
         padding-left: 24px;
         padding-right: 24px;
+    }
+}
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 10px;
+}
+
+.grid-item {
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    &:first-child{
+        grid-row: 1 / 13;
+        grid-column: 1 / 5;
+    }
+    &:last-child{
+        grid-column: 13 / 17;
+        grid-row: 1 / 13;
+    }
+    &:nth-child(2){
+        grid-row: 1 / 6;
+        grid-column: 5 / 9;
+    }
+    &:nth-child(3){
+        grid-row: 1 / 6;
+        grid-column: 9 / 13;
+    }
+    &:nth-child(4){
+        grid-column: 5 / 8;
+        grid-row: 6 / 13;
+    }
+    &:nth-child(5){
+        grid-column: 8 / 13;
+        grid-row: 6 / 13;
     }
 }
