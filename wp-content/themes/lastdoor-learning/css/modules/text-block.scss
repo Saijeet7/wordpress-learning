@@ -1,0 +1,136 @@
+.textBlock {
+  padding: 110px 0;
+  @media #{$tablet} {
+    padding: 70px 0;
+  }
+  @media #{$phone} {
+    padding: 50px 0;
+  }
+}
+
+.textBlock__column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.textBlock__row {
+  color: $black;
+  @include fsz(18px);
+  font: {
+    family: $primary-family;
+    weight: 400;
+  }
+  line-height: 1.55;
+  width: calc(34.189% - 30px);
+  @media #{$phone} {
+    width: 100%;
+  }
+}
+
+.textBlock__image {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  .icon {
+    width: 50px;
+    height: 50px;
+    color: $secondary;
+    box-shadow: 3.75px 3.75px 3.75px rgba(5, 53, 81, 0.2);
+  }
+  @media #{$tablet} {
+    margin-bottom: 10px;
+  }
+  @media #{$phone} {
+    margin-bottom: 5px;
+  }
+}
+
+.textBlock__title {
+  color: $primary;
+  @include fsz(32px);
+  font: {
+    family: $secondary-family;
+    weight: 700;
+  }
+  letter-spacing: -0.02em;
+  line-height: 1.21;
+  margin-bottom: 10px;
+  @media #{$tablet} {
+    @include fsz(28px);
+  }
+}
+
+.textBlock__description {
+  @include fsz(18px);
+  font: {
+    family: $primary-family;
+    weight: 400;
+  }
+  line-height: 1.55;
+  width: 48.719%;
+  margin-bottom: 40px;
+  @media #{$phone} {
+    width: 100%;
+    @include fsz(16px);
+    margin-bottom: 30px;
+  }
+}
+
+.textBlock--alt {
+  background-color: $secondary;
+  .sectionTitle {
+    margin-bottom: 25px;
+  }
+  .textBlock__description,
+  .textBlock__title,
+  .icon,
+  .marginLeft,
+  .textBlock__row {
+    color: $white;
+  }
+  .textBlock__column {
+    row-gap: 60px;
+  }
+}
+
+.textBlock--secondary {
+  background-color: $primary-light;
+}
+
+.sectionTitle {
+  color: $primary;
+  @include fsz(62px);
+  font: {
+    family: $secondary-family;
+    weight: 900;
+  }
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  .marginLeft {
+    margin-left: 70px;
+    font-weight: 900;
+    display: block;
+    @media #{$phone} {
+      margin-left: 0;
+    }
+  }
+  strong {
+    color: $secondary;
+    font-weight: 900;
+  }
+  margin-bottom: 40px;
+  @media #{$phone} {
+    @include fsz(50px);
+    margin-bottom: 20px;
+  }
+  @media #{$phone-smaller} {
+    @include fsz(36px);
+  }
+}
+
+.sectionTitle--alt {
+  color: $white;
+}
