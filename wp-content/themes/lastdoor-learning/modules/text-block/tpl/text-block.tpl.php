@@ -7,11 +7,11 @@ if (!empty($data['settings']['module_id'])) {
 
 ?>
 
-<section class="textBlock <?php if ($data['type'] == 'orange') {
-    echo 'textBlock--alt';
+<section class="textBlock<?php if ($data['type'] == 'orange') {
+    echo ' textBlock--alt';
 } elseif ($data['type'] == 'blue') {
-    echo 'textBlock--alt textBlock--secondary';
-} ?> ">
+    echo ' textBlock--alt textBlock--secondary';
+} ?> " id="<?php echo esc_attr($block_id); ?>">
     <div class="container">
         <div class="textBlock__wrapper">
             <?php if (!empty($data['title'])): ?>

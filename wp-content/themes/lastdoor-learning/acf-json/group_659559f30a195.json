@@ -45,7 +45,7 @@
         {
             "key": "field_65955a30dee0c",
             "label": "Bottom Spacing - Desktop",
-            "name": "bottom_spacing_-_desktop",
+            "name": "bottom_spacing_desktop",
             "aria-label": "",
             "type": "text",
             "instructions": "Add unit after value ie: 100px OR 10%",
@@ -65,7 +65,7 @@
         {
             "key": "field_65955a49dee0d",
             "label": "Bottom Spacing - Mobile",
-            "name": "bottom_spacing_-_mobile",
+            "name": "bottom_spacing_mobile",
             "aria-label": "",
             "type": "text",
             "instructions": "Add unit after value ie: 50px OR 5%",
@@ -122,5 +122,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1704286885
+    "modified": 1704292996
 }
