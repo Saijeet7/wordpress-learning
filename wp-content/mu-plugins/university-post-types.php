@@ -39,11 +39,12 @@ function university_post_types()
             'menu_icon' => 'dashicons-awards'
         )
     );
+    // Professor Post Type
     register_post_type(
         'professor',
         array(
             'show_in_rest' => true,
-            'supports' => array('title', 'editor'),
+            'supports' => array('title', 'editor', 'thumbnail'),
             'public' => true,
             'labels' => array(
                 'name' => 'Professors',
