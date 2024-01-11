@@ -42,27 +42,39 @@ class Search {
   }
 
   getResults() {
-    $.getJSON(
-      universityData.root_url +
-        "/wp-json/wp/v2/posts?search=" +
-        this.searchField.val(),
-      (posts) => {
+    $.when(
+      $.getJSON(
+        universityData.root_url +
+          "/wp-json/wp/v2/posts?search=" +
+          this.searchField.val()
+      ),
+      $.getJSON(
+        universityData.root_url +
+          "/wp-json/wp/v2/pages?search=" +
+          this.searchField.val()
+      )
+    ).then(
+      (posts, pages) => {
+        var combinedResult = posts[0].concat(pages[0]);
         this.resultsDiv.html(`
         <h2 class="search-overlay__section-title">General Information</h2>
         ${
-          posts.length > 0
+          combinedResult.length > 0
             ? '<ul class="link-list min-list">'
             : "<p>No general information matches found</p>"
         }
-          ${posts
-            .map(
-              (item) =>
-                `<li><a href="${item.link}">${item.title.rendered}</a></li>`
-            )
-            .join("")}
-        ${posts.length > 0 ? "</ul>" : ""}
+        ${combinedResult
+          .map(
+            (item) =>
+              `<li><a href="${item.link}">${item.title.rendered}</a></li>`
+          )
+          .join("")}
+        ${combinedResult.length > 0 ? "</ul>" : ""}
         `);
         this.isSpinnerVisible = false;
+      },
+      () => {
+        this.resultsDiv.html("<p>Unexpected error please try again</p>");
       }
     );
   }
