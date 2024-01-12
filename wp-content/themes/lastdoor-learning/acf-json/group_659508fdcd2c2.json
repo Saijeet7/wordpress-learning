@@ -48,6 +48,38 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_659ffb2d4bed1": {
+                    "key": "layout_659ffb2d4bed1",
+                    "name": "team_relationship",
+                    "label": "Team Relationship",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_659ffb394bed4",
+                            "label": "Team Relation",
+                            "name": "team_relation",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_659ff9aa30335"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -80,5 +112,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1704293651
+    "modified": 1704983395
 }
