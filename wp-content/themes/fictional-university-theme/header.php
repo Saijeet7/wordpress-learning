@@ -41,7 +41,8 @@
                 </nav>
                 <div class="site-header__util">
                     <?php if (is_user_logged_in()) { ?>
-
+                        <a href="<?php echo esc_url(site_url('./my-notes')); ?>"
+                            class="btn btn--small btn--orange float-left push-right">My Notes</a>
                         <a href="<?php echo wp_logout_url(); ?>"
                             class="btn btn--small btn--dark-orange float-left btn--with-photo">
                             <span class="site-header__avatar">
@@ -51,7 +52,6 @@
                         </a>
                         <?php
                     } else { ?>
-
                         <a href="<?php echo wp_login_url(); ?>"
                             class="btn btn--small btn--orange float-left push-right">Login</a>
                         <a href="<?php echo wp_registration_url(); ?>"
@@ -60,11 +60,9 @@
                     }
                     ?>
                     <a href="<?php echo esc_url(site_url('/search')) ?>" class="search-trigger js-search-trigger"><i
-                            class="fa fa-search" aria-hidden="true"></i></a>
-
-
+                            class="fa fa-search" aria-hidden="true"></i>
+                    </a>
                 </div>
-
             </div>
         </div>
     </header>
