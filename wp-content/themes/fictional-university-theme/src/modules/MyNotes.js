@@ -91,13 +91,15 @@ class MyNotes {
       },
     });
   }
+
   //   Create notes
   createNote(e) {
-    let ourNewPost = {
+    var ourNewPost = {
       title: $(".new-note-title").val(),
       content: $(".new-note-body").val(),
       status: "publish",
     };
+
     $.ajax({
       beforeSend: (xhr) => {
         xhr.setRequestHeader("X-WP-Nonce", universityData.nonce);
@@ -108,23 +110,22 @@ class MyNotes {
       success: (response) => {
         $(".new-note-title, .new-note-body").val("");
         $(`
-        <li data-id='${response.id}'>
-          <input readonly type="text" value="${response.title.raw}" class="note-title-field">
-          <span class="edit-note"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</span>
-          <span class="delete-note"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</span>
-          <textarea readonly name="" id="" cols="30" rows="10"
-              class="note-body-field">${response.content.raw}</textarea>
-          <span class="update-note btn btn--blue btn--small"><i class="fa fa-arrow-right" aria-hidden="true"></i>
-              Save</span>
+          <li data-id="${response.id}">
+            <input readonly class="note-title-field" value="${response.title.raw}">
+            <span class="edit-note"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</span>
+            <span class="delete-note"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</span>
+            <textarea readonly class="note-body-field">${response.content.raw}</textarea>
+            <span class="update-note btn btn--blue btn--small"><i class="fa fa-arrow-right" aria-hidden="true"></i> Save</span>
           </li>
-        `)
+          `)
           .prependTo("#my-notes")
           .hide()
           .slideDown();
+
         console.log("Congrats");
         console.log(response);
       },
-      error: () => {
+      error: (response) => {
         console.log("Sorry");
         console.log(response);
       },
