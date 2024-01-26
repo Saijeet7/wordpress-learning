@@ -4,10 +4,14 @@ require get_theme_file_path('/inc/search-route.php');
 
 function university_custom_rest()
 {
-    register_rest_field('post', 'authorName', array(
-        'get_callback' => function () {
-            return get_the_author(); }
-    )
+    register_rest_field(
+        'post',
+        'authorName',
+        array(
+            'get_callback' => function () {
+                return get_the_author();
+            }
+        )
     );
 }
 
@@ -57,9 +61,13 @@ function university_files()
     wp_enqueue_style('university_main_styles', get_theme_file_uri('/build/style-index.css'));
     wp_enqueue_style('university_extra_styles', get_theme_file_uri('/build/index.css'));
 
-    wp_localize_script('main-university-js', 'universityData', array(
-        'root_url' => get_site_url()
-    )
+    wp_localize_script(
+        'main-university-js',
+        'universityData',
+        array(
+            'root_url' => get_site_url(),
+            'nonce' => wp_create_nonce('wp_rest')
+        )
     );
 
 }
@@ -94,14 +102,16 @@ function university_adjust_queries($query)
         $query->set('meta_key', 'event_date');
         $query->set('orderby', 'meta_value_num');
         $query->set('order', 'ASC');
-        $query->set('meta_query', array(
+        $query->set(
+            'meta_query',
             array(
-                'key' => 'event_date',
-                'compare' => '>=',
-                'value' => $today,
-                'type' => 'numeric'
+                array(
+                    'key' => 'event_date',
+                    'compare' => '>=',
+                    'value' => $today,
+                    'type' => 'numeric'
+                )
             )
-        )
         );
     }
 }
