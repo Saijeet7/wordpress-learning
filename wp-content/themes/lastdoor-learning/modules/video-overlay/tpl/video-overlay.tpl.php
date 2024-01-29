@@ -6,7 +6,7 @@ if (!empty($data['settings']['module_id'])) {
 }
 
 ?>
-<section class="video-block" <?php if (!empty($data['background'])): ?>style="background-color: <?php echo $data['background'] ?>;" <?php endif ?>
+<section class="video-block" <?php if (!empty($data['background'])): ?>style="background: <?php echo $data['background'] ?>;" <?php endif ?>
     id="<?php echo esc_attr($block_id); ?>">
     <div class="container">
         <?php if (!empty($data['media'])):
