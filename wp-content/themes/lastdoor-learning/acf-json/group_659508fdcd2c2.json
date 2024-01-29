@@ -49,16 +49,16 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_65b74de2b9205": {
-                    "key": "layout_65b74de2b9205",
-                    "name": "video_block",
-                    "label": "Video Block",
+                "layout_65b778ab2859e": {
+                    "key": "layout_65b778ab2859e",
+                    "name": "video_overlay",
+                    "label": "Video Overlay",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_65b74deab9208",
-                            "label": "Video Block",
-                            "name": "video_block",
+                            "key": "field_65b778bf285a1",
+                            "label": "Video Overlay",
+                            "name": "video_overlay",
                             "aria-label": "",
                             "type": "clone",
                             "instructions": "",
@@ -70,7 +70,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_65b744896921b"
+                                "group_65b774d5754c6"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -112,5 +112,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1706511884
+    "modified": 1706524220
 }
