@@ -49,16 +49,16 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_659ffb2d4bed1": {
-                    "key": "layout_659ffb2d4bed1",
-                    "name": "team_relationship",
-                    "label": "Team Relationship",
+                "layout_65b74de2b9205": {
+                    "key": "layout_65b74de2b9205",
+                    "name": "video_block",
+                    "label": "Video Block",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_659ffb394bed4",
-                            "label": "Team Relation",
-                            "name": "team_relation",
+                            "key": "field_65b74deab9208",
+                            "label": "Video Block",
+                            "name": "video_block",
                             "aria-label": "",
                             "type": "clone",
                             "instructions": "",
@@ -70,7 +70,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_659ff9aa30335"
+                                "group_65b744896921b"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -112,5 +112,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1704983395
+    "modified": 1706511884
 }
